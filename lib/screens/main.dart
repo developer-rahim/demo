@@ -291,10 +291,7 @@ class _MainState extends State<Main> {
                       Expanded(
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Git2()));
+                          
                             print('yes selected');
                             exit(0);
                           },
