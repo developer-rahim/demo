@@ -6,6 +6,7 @@ import 'package:active_ecommerce_flutter/my_theme.dart';
 import 'package:active_ecommerce_flutter/screens/cart.dart';
 import 'package:active_ecommerce_flutter/screens/category_list.dart';
 import 'package:active_ecommerce_flutter/screens/filter2.dart';
+import 'package:active_ecommerce_flutter/screens/git4.dart';
 import 'package:active_ecommerce_flutter/screens/home.dart';
 import 'package:active_ecommerce_flutter/screens/login.dart';
 import 'package:active_ecommerce_flutter/screens/profile.dart';
@@ -67,10 +68,16 @@ class _MainState extends State<Main> {
             content: Container(
               height: 100,
               child: Column(
-                children: [Container(
-                  height: 100,
-                  child:AppConfig.BASE_PATH + value==null?CircularProgressIndicator(): Image.network(AppConfig.BASE_PATH + value,fit: BoxFit.fill,
-                 ))],
+                children: [
+                  Container(
+                      height: 100,
+                      child: AppConfig.BASE_PATH + value == null
+                          ? CircularProgressIndicator()
+                          : Image.network(
+                              AppConfig.BASE_PATH + value,
+                              fit: BoxFit.fill,
+                            ))
+                ],
               ),
             ),
             actions: [
@@ -284,6 +291,10 @@ class _MainState extends State<Main> {
                       Expanded(
                         child: ElevatedButton(
                           onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Git2()));
                             print('yes selected');
                             exit(0);
                           },
